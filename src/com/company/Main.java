@@ -12,12 +12,14 @@ public class Main {
         set.add(new City(212, "New-York"));
         set.add(new City(495, "Moscow"));
         set.add(new City(20, "London"));
-        set.removeIf(a->a.getCode()%2==0);
+
         Set<City> setTak = new TreeSet<>(set);
         for (City city : setTak) {
-            System.out.println(city);
+            if (city.getCode() % 2 != 0) {
+                System.out.println(city);
+            }
         }
-        }
+    }
 }
 
 

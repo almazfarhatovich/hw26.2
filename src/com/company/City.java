@@ -40,6 +40,13 @@ public class City implements Comparable<City> {
 
     @Override
     public int compareTo(City code) {
-        return Integer.compare(code.getCode(), this.code);
+        if (this.code == code.getCode()) {
+            return 0;
+        }
+        else if (this.code > code.getCode() ){
+            return -1;
+        }
+        else
+            return 1;
     }
 }
